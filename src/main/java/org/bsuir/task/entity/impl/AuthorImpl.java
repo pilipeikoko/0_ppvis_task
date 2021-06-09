@@ -1,17 +1,17 @@
 package org.bsuir.task.entity.impl;
 
-import org.bsuir.task.entity.Writer;
+import org.bsuir.task.entity.Author;
 import org.bsuir.task.entity.Document;
 import org.bsuir.task.entity.Folder;
 import org.bsuir.task.exception.CustomException;
 
 import java.time.LocalDate;
 
-public class WriterImpl implements Writer {
+public class AuthorImpl implements Author {
 
     private final String name;
 
-    public WriterImpl(String name) {
+    public AuthorImpl(String name) {
         this.name = name;
     }
 

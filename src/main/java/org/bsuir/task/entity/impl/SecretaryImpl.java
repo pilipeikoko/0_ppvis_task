@@ -29,13 +29,13 @@ public class SecretaryImpl implements Secretary {
     }
 
     @Override
-    public synchronized Document searchDocumentByWriter(Folder currentFolder, String writer) {
+    public synchronized Document searchDocumentByAuthor(Folder currentFolder, String author) {
         List<Folder> foldersInCurrentFolder = currentFolder.getFolders();
 
         for (Folder folder : foldersInCurrentFolder) {
             List<Document> documentsInFolder = folder.getDocuments();
             for (Document document : documentsInFolder) {
-                if (document.getWriter().equals(writer)) {
+                if (document.getAuthor().equals(author)) {
                     return document;
                 }
             }

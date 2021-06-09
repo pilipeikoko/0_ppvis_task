@@ -8,13 +8,13 @@ import java.time.LocalDate;
 public class Document {
     private String header;
     private LocalDate createDate;
-    private String writer;
+    private String author;
     private String context;
 
-    public Document(Folder folder, String header, LocalDate createDate, String writer, String context) throws CustomException {
+    public Document(Folder folder, String header, LocalDate createDate, String author, String context) throws CustomException {
         this.header = header;
         this.createDate = createDate;
-        this.writer = writer;
+        this.author = author;
         this.context = context;
         if (!CustomValidator.isHeaderTaken(folder.getDocuments(), header)) {
             folder.addDocument(this);
@@ -31,8 +31,8 @@ public class Document {
         return createDate;
     }
 
-    public String getWriter() {
-        return writer;
+    public String getAuthor() {
+        return author;
     }
 
     public String getContext() {
@@ -47,8 +47,8 @@ public class Document {
         this.createDate = createDate;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void setContext(String context) {

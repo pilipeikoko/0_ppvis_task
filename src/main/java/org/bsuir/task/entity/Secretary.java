@@ -5,5 +5,5 @@ public interface Secretary {
 
     Document searchDocumentByHeader(Folder folder, String header);
 
-    Document searchDocumentByWriter(Folder folder, String writer);
+    Document searchDocumentByAuthor(Folder folder, String writer);
 }
